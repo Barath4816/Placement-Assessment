@@ -1,0 +1,28 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       System.out.println("enter no. of rows: ");
+       int row=sc.nextInt();
+       System.out.println("enter no. of column: ");
+       int column=sc.nextInt();
+       int [][] a=new int[row][column];
+       for(int k=0;k<row;k++){
+           for(int l=0;l<column;l++){
+               a[k][l]=sc.nextInt();
+           }
+       }
+       identicaltranspose(a);
+    }
+    public static void identicaltranspose(int [][] a){
+          int n=a.length;
+        int m=a[0].length;
+        for(int i=0;i<n;i++,System.out.println()){
+            for(int j=0;j<m;j++,System.out.print(" ")){
+                if(j==0||j==m-1||i==0||i==n-1){
+                    a[j][i]=a[i][j];
+                }
+            System.out.print(a[i][j]);}
+        }
+    }
+}
